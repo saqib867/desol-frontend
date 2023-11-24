@@ -24,7 +24,7 @@ function page() {
           setLoading(true)
            try {
             
-            const response = await axios.post('http://localhost:4000/api/login',data)
+            const response = await axios.post('https://desol-backend-kappa.vercel.app/api/login',data)
             console.log("response.dadta ",response.data)
             localStorage.setItem('user',response.data?.data?.email)
              navigate.push('/uploadpage')

@@ -62,7 +62,7 @@ const handleUploadForm = (data) => {
               // Now you have an array of image URLs, you can use them along with other data
               const formData = { ...data, pictures:imageUrls };
         
-              axios.post('http://localhost:4000/api/car', formData)
+              axios.post('https://desol-backend-kappa.vercel.app/api/car', formData)
                 .then((res) => {
                   console.log('Form added successfully');
                   alert("Form added successfully.")

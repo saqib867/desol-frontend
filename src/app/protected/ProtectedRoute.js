@@ -7,8 +7,11 @@ import React from 'react'
 function ProtectedRoute({children}) {
     
     const navigate = useRouter()
-
-    const user =localStorage.getItem('user')
+    let user
+    if (typeof localStorage !== 'undefined') {
+        user = localStorage.getItem('user');
+      }
+    
     if(user){
           return children
     }
@@ -16,4 +19,4 @@ function ProtectedRoute({children}) {
   return navigate.push('/login')
 }
 
-export default ProtectedRoute
+export default ProtectedRoute  
