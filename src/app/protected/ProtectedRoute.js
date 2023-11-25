@@ -12,12 +12,12 @@ function ProtectedRoute({children}) {
         user = localStorage.getItem('user');
       }
     
-    if(!user){
+    if(user){
           
-          return navigate.push('/login')
+        return children
     }
     
-    return children
+   
 }
 
 export default ProtectedRoute  
