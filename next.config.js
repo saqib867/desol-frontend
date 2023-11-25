@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
-module.exports = () => {
-    const rewrites = () => {
-      return [
+const nextConfig = {
+    middleware: [
         {
-          source: "/cats",
-          destination: "https://meowfacts.herokuapp.com",
+         
+          // The options for the middleware
+          options: {
+            // The host and port of the remote server
+            target: "https://desol-backend-kappa.vercel.app",
+            // The path on the remote server that will be proxied
+            path: "/api",
+          },
         },
-      ];
-    };
-    return {
-      rewrites,
-    };
-  };
+      ],
+}
 
+module.exports = nextConfig
