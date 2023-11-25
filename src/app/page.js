@@ -19,7 +19,7 @@ export default function Home() {
                
 
                 <button
-                    className="flex text-gray-600 cursor-pointer transition-colors duration-300 font-semibold "
+                    className="flex bg-blue-400 p-3 border rounded text-gray-600 cursor-pointer transition-colors duration-300 font-semibold "
                     onClick={()=>navigate.push('/login')}
                     >
                     
