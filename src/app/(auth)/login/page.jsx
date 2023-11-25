@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React, { useState } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -24,7 +24,7 @@ function page() {
           setLoading(true)
            try {
             
-            const response = await axios.post('/api/login',data)
+            const response = await axios.post('https://desol-backend-two.vercel.app/api/login',data)
             console.log("response.dadta ",response.data)
             localStorage.setItem('user',response.data?.data?.email)
              navigate.push('/uploadpage')
