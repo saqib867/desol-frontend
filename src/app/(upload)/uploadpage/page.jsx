@@ -8,7 +8,7 @@ function page() {
   const { errors, handleImage, handleSubmit, register, handleUploadForm,pictures,loading,getValues } = useUploadForm();
  
   return (
-    <ProtectedRoute>
+    
       <div>
         <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
           <div class="container max-w-screen-lg mx-auto">
@@ -115,7 +115,7 @@ function page() {
           </div>
         </div>
       </div>
-    </ProtectedRoute>
+  
   );
 }
 
