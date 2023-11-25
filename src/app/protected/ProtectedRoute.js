@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import {useEffect} from 'react'
 
 
 function ProtectedRoute({children}) {
@@ -12,18 +11,13 @@ function ProtectedRoute({children}) {
     if (typeof localStorage !== 'undefined') {
         user = localStorage.getItem('user');
       }
-
-    useEffect(()=>{
-
- 
-        if(user){
-            return children
-      }
-      
-    return navigate.replace('/login')
-    },[user])
     
-   
+    if(!user){
+          
+          return navigate.push('/login')
+    }
+    
+    return children
 }
 
 export default ProtectedRoute  
