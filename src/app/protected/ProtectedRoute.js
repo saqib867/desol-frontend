@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router';
 import React from 'react'
 
 
@@ -14,10 +14,10 @@ function ProtectedRoute({children}) {
     
     if(user){
           
-        return children
+          return navigate.push('/login')
     }
     
-   
+    return children
 }
 
 export default ProtectedRoute  
