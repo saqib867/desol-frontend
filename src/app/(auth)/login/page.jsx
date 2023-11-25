@@ -30,7 +30,7 @@ function page() {
              navigate.push('/uploadpage')
            } catch (error) {
             
-               console.log("errors ",error)
+               console.log("errors ",error)  //jhghjglkjhj
                alert(error?.response?.data?.message)
            }     
            finally{
