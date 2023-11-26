@@ -24,7 +24,7 @@ function page() {
           setLoading(true)
            try {
             
-            const response = await axios.post('/api/login',data,{headers: {
+            const response = await axios.post('https://desol-backend-alpha.vercel.app/api/login',data,{headers: {
                 'Access-Control-Allow-Origin': '*',
                 // Other headers...
               }})
